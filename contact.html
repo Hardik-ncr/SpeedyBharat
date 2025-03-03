@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -84,10 +86,12 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/page-title-bg.jpg);">
+    <div class="page-title dark-background" data-aos="fade"
+      style="background-image: url(assets/img/page-title-bg.jpg);">
       <div class="container position-relative">
         <h1>Contact</h1>
-        <p>Contact us for fast delivery, real-time tracking, and seamless logistics solutions – because your parcel is our responsibility</p>
+        <p>Contact us for fast delivery, real-time tracking, and seamless logistics solutions – because your parcel is
+          our responsibility</p>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
@@ -136,35 +140,29 @@
           </div>
 
           <div class="col-lg-8">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
+            <form id="contactForm">
               <div class="row gy-4">
-
                 <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
+                  <input type="text" id="name" class="form-control" placeholder="Your Name" required>
                 </div>
-
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
+                <div class="col-md-6">
+                  <input type="email" id="email" class="form-control" placeholder="Your Email" required>
                 </div>
-
                 <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
+                  <input type="text" id="subject" class="form-control" placeholder="Subject" required>
                 </div>
-
                 <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
+                  <textarea id="message" class="form-control" rows="6" placeholder="Message" required></textarea>
                 </div>
-
                 <div class="col-md-12 text-center">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-
-                  <button type="submit">Send Message</button>
+                  <button type="submit" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow">
+                    <i class="fas fa-paper-plane"></i> Send Message
+                  </button>
                 </div>
-
+                
               </div>
             </form>
+
           </div><!-- End Contact Form -->
 
         </div>
@@ -183,11 +181,13 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">SpeedyBharat</span>
           </a>
-          <p>SpeedyBharat ensures fast, affordable, and reliable intercity parcel delivery using India’s vast bus network. 🚚📦 With real-time tracking and doorstep service, we make logistics seamless and efficient!</p>
+          <p>SpeedyBharat ensures fast, affordable, and reliable intercity parcel delivery using India’s vast bus
+            network. 🚚📦 With real-time tracking and doorstep service, we make logistics seamless and efficient!</p>
           <div class="social-links d-flex mt-4">
             <!-- <a href=""><i class="bi bi-twitter-x"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a> -->
-            <a href="https://www.instagram.com/hardik_ncr/?igsh=MTR5b2d5bDBraGMwOQ%3D%3D#"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/hardik_ncr/?igsh=MTR5b2d5bDBraGMwOQ%3D%3D#"><i
+                class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/in/hardik-kathuria-87598a1a7/"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
@@ -227,7 +227,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">SpeedyBharat</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SpeedyBharat</strong> <span>All Rights Reserved</span>
+      </p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -240,7 +241,8 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
@@ -256,6 +258,33 @@
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+  
+      var formData = new FormData();
+      formData.append("name", document.getElementById("name").value);
+      formData.append("email", document.getElementById("email").value);
+      formData.append("subject", document.getElementById("subject").value);
+      formData.append("message", document.getElementById("message").value);
+  
+      fetch("https://script.google.com/macros/s/AKfycbwKdL_KfUnJpjYG5x3_zBdgVrclHC_bZ5MzXQwAk06igQ5Ws_LwuqidC9GWpDkCUqSSUQ/exec", {
+        method: "POST",
+        body: formData
+      })
+        .then(response => response.text())
+        .then(data => {
+          if (data === "Success") {
+            alert("Your response has been submitted!");
+            document.getElementById("contactForm").reset();
+          } else {
+            alert("Error saving your message.");
+          }
+        })
+        .catch(error => console.error("Error:", error));
+    });
+  </script>
+  
 </body>
 
 </html>
