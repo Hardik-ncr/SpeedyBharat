@@ -149,6 +149,9 @@
                   <input type="email" id="email" class="form-control" placeholder="Your Email" required>
                 </div>
                 <div class="col-md-12">
+                  <input type="number" id="phone" class="form-control" placeholder="Your Phone" required>
+                </div>
+                <div class="col-md-12">
                   <input type="text" id="subject" class="form-control" placeholder="Subject" required>
                 </div>
                 <div class="col-md-12">
@@ -265,10 +268,11 @@
       var formData = new FormData();
       formData.append("name", document.getElementById("name").value);
       formData.append("email", document.getElementById("email").value);
+      formData.append("phone", document.getElementById("phone").value);
       formData.append("subject", document.getElementById("subject").value);
       formData.append("message", document.getElementById("message").value);
   
-      fetch("https://script.google.com/macros/s/AKfycbwKdL_KfUnJpjYG5x3_zBdgVrclHC_bZ5MzXQwAk06igQ5Ws_LwuqidC9GWpDkCUqSSUQ/exec", {
+      fetch("https://script.google.com/macros/s/AKfycbxw38pfCqGqa4YmfFAMrIu0hOcvzgMMrdwTrDgBcwp_8js6ND-S5gt26Br4MIoAh4sKkw/exec", {
         method: "POST",
         body: formData
       })
