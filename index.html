@@ -15,7 +15,9 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -73,39 +75,88 @@
         <div class="row gy-4 d-flex justify-content-between">
           <div class="col-lg-6 order-2 order-lg-1 d-flex flex-column justify-content-center">
             <h2 data-aos="fade-up">Your Parcel Our Responsibility</h2>
-            <p data-aos="fade-up" data-aos-delay="100">SpeedyBharat  is transforming intercity logistics with 24-hour fast delivery, real-time tracking, and doorstep pickup & drop using India’s vast bus network. We offer cost-effective, secure, and tech-driven solutions for businesses and individuals, ensuring speed, reliability, and efficiency in every shipment. Deliver smarter with SpeedyBharat!</p>
+            <p data-aos="fade-up" data-aos-delay="100">SpeedyBharat is transforming intercity logistics with 24-hour
+              fast delivery, real-time tracking, and doorstep pickup & drop using India’s vast bus network. We offer
+              cost-effective, secure, and tech-driven solutions for businesses and individuals, ensuring speed,
+              reliability, and efficiency in every shipment. Deliver smarter with SpeedyBharat!</p>
 
-            <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200">
-              <input type="text" class="form-control" placeholder="Your Pin code Or City- Jaipur/ Delhi">
+            <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200"
+              id="locationForm">
+              <input type="text" id="locationInput" class="form-control"
+                placeholder="Your Pin code Or City- Jaipur/ Delhi">
               <button type="submit" class="btn btn-primary">Search</button>
             </form>
+
+            <!-- Service Available Modal -->
+            <div class="modal fade" id="serviceAvailableModal" tabindex="-1" aria-labelledby="serviceAvailableLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content"
+                  style="background: linear-gradient(135deg, #28a745, #66bb6a); color: white; border-radius: 12px; text-align: center; padding: 20px; box-shadow: 0px 5px 15px rgba(0,0,0,0.2);">
+                  <div class="modal-body" style="font-size: 18px; font-weight: 600;">
+                    ✅ Yes, we have our service in this location.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Confirm Order Modal -->
+            <div class="modal fade" id="confirmOrderModal" tabindex="-1" aria-labelledby="confirmOrderLabel"
+              aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content"
+                  style="background: linear-gradient(135deg, #007bff, #5599ff); color: white; border-radius: 12px; text-align: center; padding: 20px; box-shadow: 0px 5px 15px rgba(0,0,0,0.2);">
+                  <div class="modal-body" style="font-size: 18px; font-weight: 600;">
+                    📦 Please proceed with your order.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Service Not Available Modal -->
+            <div class="modal fade" id="serviceNotAvailableModal" tabindex="-1"
+              aria-labelledby="serviceNotAvailableLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content"
+                  style="background: linear-gradient(135deg, #ff4444, #ff6666); color: white; border-radius: 12px; text-align: center; padding: 20px; box-shadow: 0px 5px 15px rgba(0,0,0,0.2);">
+                  <div class="modal-body" style="font-size: 18px; font-weight: 600;">
+                    ❌ Oops, we don't have our service in this location.
+                  </div>
+                </div>
+              </div>
+            </div>
+
 
             <div class="row gy-4" data-aos="fade-up" data-aos-delay="300">
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="0" class="purecounter">18</span>
+                  <span data-purecounter-start="0" data-purecounter-end="18" data-purecounter-duration="0"
+                    class="purecounter">18</span>
                   <p>Clients</p>
                 </div>
               </div><!-- End Stats Item -->
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="0" class="purecounter">10</span>
+                  <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="0"
+                    class="purecounter">10</span>
                   <p>Projects</p>
                 </div>
               </div><!-- End Stats Item -->
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="0" class="purecounter">150</span>
+                  <span data-purecounter-start="0" data-purecounter-end="150" data-purecounter-duration="0"
+                    class="purecounter">150</span>
                   <p>Support</p>
                 </div>
               </div><!-- End Stats Item -->
 
               <div class="col-lg-3 col-6">
                 <div class="stats-item text-center w-100 h-100">
-                  <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="0" class="purecounter">5</span>
+                  <span data-purecounter-start="0" data-purecounter-end="5" data-purecounter-duration="0"
+                    class="purecounter">5</span>
                   <p>Workers</p>
                 </div>
               </div><!-- End Stats Item -->
@@ -139,20 +190,20 @@
           <div class="col-lg-6 content order-last order-lg-first" data-aos="fade-up" data-aos-delay="100">
             <h3>About Us</h3>
             <p style="font-size: 16px; line-height: 1.8;">
-                SpeedyBharat is a tech-enabled logistics startup transforming intercity parcel delivery by utilizing 
-                India's vast bus network for 24-hour shipments across 300-350 km.  
-                <br><br>
-                Our platform offers fast, affordable, and trackable deliveries, catering to e-commerce sellers, small 
-                businesses, and retailers.  
-                <br><br>
-                With real-time GPS tracking, doorstep pickup, and seamless integration with bus operators, we ensure 
-                secure and efficient logistics.  
-                <br><br>
-                By leveraging AI-driven route optimization and digital payment solutions, we reduce costs and enhance 
-                delivery speed.  
-                <br><br>
-                Aligning with India’s National Logistics Policy (NLP) 2022, Bfast Services is bridging the logistics gap, 
-                making deliveries smarter, faster, and more reliable.
+              SpeedyBharat is a tech-enabled logistics startup transforming intercity parcel delivery by utilizing
+              India's vast bus network for 24-hour shipments across 300-350 km.
+              <br><br>
+              Our platform offers fast, affordable, and trackable deliveries, catering to e-commerce sellers, small
+              businesses, and retailers.
+              <br><br>
+              With real-time GPS tracking, doorstep pickup, and seamless integration with bus operators, we ensure
+              secure and efficient logistics.
+              <br><br>
+              By leveraging AI-driven route optimization and digital payment solutions, we reduce costs and enhance
+              delivery speed.
+              <br><br>
+              Aligning with India’s National Logistics Policy (NLP) 2022, Bfast Services is bridging the logistics gap,
+              making deliveries smarter, faster, and more reliable.
             </p>
             <!-- <ul>
               <li>
@@ -185,68 +236,68 @@
 
     </section><!-- /About Section -->
 
-   <!-- Services Section -->
-   <section id="services" class="services section">
+    <!-- Services Section -->
+    <section id="services" class="services section">
 
-    <!-- Section Title -->
-    <div class="container section-title" data-aos="fade-up">
-      <span>Our Services<br></span>
-      <h2>Our ServiceS</h2>
-      <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
-    </div><!-- End Section Title -->
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <span>Our Services<br></span>
+        <h2>Our ServiceS</h2>
+        <!-- <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p> -->
+      </div><!-- End Section Title -->
 
-    <div class="container">
+      <div class="container">
 
-      <div class="row gy-4">
+        <div class="row gy-4">
 
-        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="card">
-            <div class="card-img">
-              <img src="assets/img/24-Hour Intercity Parcel Delivery.webp" alt="" class="img-fluid">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/24-Hour Intercity Parcel Delivery.webp" alt="" class="img-fluid">
+              </div>
+              <h3>24-Hour Intercity Parcel Delivery</h3>
+              <p> Fast shipping across 300-350 km using bus networks</p>
             </div>
-            <h3>24-Hour Intercity Parcel Delivery</h3>
-            <p> Fast shipping across 300-350 km using bus networks</p>
-          </div>
-        </div><!-- End Card Item -->
+          </div><!-- End Card Item -->
 
-        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="card">
-            <div class="card-img">
-              <img src="assets/img/Real Time Tracking.webp" alt="" class="img-fluid">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/Real Time Tracking.webp" alt="" class="img-fluid">
+              </div>
+              <h3><a href="#" class="stretched-link">Real-Time Tracking</a></h3>
+              <p>GPS-enabled tracking for secure, transparent deliveries. </p>
             </div>
-            <h3><a href="#" class="stretched-link">Real-Time Tracking</a></h3>
-            <p>GPS-enabled tracking for secure, transparent deliveries. </p>
-          </div>
-        </div><!-- End Card Item -->
+          </div><!-- End Card Item -->
 
-        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="card">
-            <div class="card-img">
-              <img src="assets/img/Doorstep Pickup & Delivery.webp" alt="" class="img-fluid">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/Doorstep Pickup & Delivery.webp" alt="" class="img-fluid">
+              </div>
+              <h3><a href="#" class="stretched-link">Doorstep Pickup & Delivery</a></h3>
+              <p>Hassle-free logistics with convenient pickups.
+              </p>
             </div>
-            <h3><a href="#" class="stretched-link">Doorstep Pickup & Delivery</a></h3>
-            <p>Hassle-free logistics with convenient pickups.
-            </p>
-          </div>
-        </div><!-- End Card Item -->
+          </div><!-- End Card Item -->
 
-        <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
-          <div class="card">
-            <div class="card-img">
-              <img src="assets/img/Tech-Integrated Platform.webp" alt="" class="img-fluid">
+          <div class="col-lg-6 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card">
+              <div class="card-img">
+                <img src="assets/img/Tech-Integrated Platform.webp" alt="" class="img-fluid">
+              </div>
+              <h3><a href="#" class="stretched-link">Tech-Integrated Platform</a></h3>
+              <p>AI-based route optimization for faster deliveries.
+              </p>
             </div>
-            <h3><a href="#" class="stretched-link">Tech-Integrated Platform</a></h3>
-            <p>AI-based route optimization for faster deliveries.
-            </p>
-          </div>
-        </div><!-- End Card Item -->
+          </div><!-- End Card Item -->
 
+
+        </div>
 
       </div>
 
-    </div>
-
-  </section><!-- /Services Section -->
+    </section><!-- /Services Section -->
 
 
     <!-- Call To Action Section -->
@@ -317,9 +368,11 @@
           <a href="index.html" class="logo d-flex align-items-center">
             <span class="sitename">SpeedyBharat</span>
           </a>
-          <p>SpeedyBharat ensures fast, affordable, and reliable intercity parcel delivery using India’s vast bus network. 🚚📦 With real-time tracking and doorstep service, we make logistics seamless and efficient!</p>
+          <p>SpeedyBharat ensures fast, affordable, and reliable intercity parcel delivery using India’s vast bus
+            network. 🚚📦 With real-time tracking and doorstep service, we make logistics seamless and efficient!</p>
           <div class="social-links d-flex mt-4">
-            <a href="https://www.instagram.com/hardik_ncr/?igsh=MTR5b2d5bDBraGMwOQ%3D%3D#"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.instagram.com/hardik_ncr/?igsh=MTR5b2d5bDBraGMwOQ%3D%3D#"><i
+                class="bi bi-instagram"></i></a>
             <a href="https://www.linkedin.com/in/hardik-kathuria-87598a1a7/"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
@@ -359,7 +412,8 @@
     </div>
 
     <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">SpeedyBharat</strong> <span>All Rights Reserved</span></p>
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">SpeedyBharat</strong> <span>All Rights Reserved</span>
+      </p>
       <div class="credits">
         <!-- All the links in the footer should remain intact. -->
         <!-- You can delete the links only if you've purchased the pro version. -->
@@ -372,12 +426,56 @@
   </footer>
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
 
   <!-- Vendor JS Files -->
+
+  <script>
+    document.getElementById('locationForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      let validLocations = [302001, 302002, 302003, 302004, 302005, 302006, 302007, 302008, 302009, 302010, 302011, 302012, 302013, 302015, 302016, 302017, 302018, 302019, 302020, 302021, 302022, 302023, 302024, 302025, 302026, 302027, 302028, 302029, 302030, 302031, 302032, 302033, 302034, 302035, 302036, 302039, 302040, 302043, 302048, 302049, 302931, 303001, 303012, 303017, 303031, 303033, 303101, 303801, 303902, 303905, 303906, 332012, 110001, 110002, 110003, 110004, 110005, 110008, 110010, 110011, 110012, 110013, 110014, 110016, 110017, 110018, 110019, 110020, 110021, 110022, 110023, 110024, 110025, 110028, 110029, 110030, 110031, 110037, 110038, 110044, 110046, 110047, 110048, 110049, 110055, 110057, 110060, 110062, 110064, 110065, 110066, 110067, 110068, 110069, 110070, 110074, 110076, 110080, 110090, 110091, 110092, 110096, 110097, 121003, 122010, 122022, 201313];
+
+      let inputLocation = document.getElementById('locationInput').value.trim();
+      let locationNumber = Number(inputLocation); // Convert to number
+
+      if (validLocations.includes(locationNumber)) {
+        let serviceAvailableModal = new bootstrap.Modal(document.getElementById('serviceAvailableModal'));
+        serviceAvailableModal.show();
+
+        // After 3 seconds, hide this modal and show the next one
+        setTimeout(function () {
+          serviceAvailableModal.hide();
+          let confirmOrderModal = new bootstrap.Modal(document.getElementById('confirmOrderModal'));
+          confirmOrderModal.show();
+
+          // After 3 seconds, hide and redirect
+          setTimeout(function () {
+            confirmOrderModal.hide();
+            window.location.href = "contact.html";
+          }, 3000);
+
+        }, 3000);
+
+      } else {
+        let serviceNotAvailableModal = new bootstrap.Modal(document.getElementById('serviceNotAvailableModal'));
+        serviceNotAvailableModal.show();
+
+        // Auto-close modal after 3 seconds
+        setTimeout(function () {
+          serviceNotAvailableModal.hide();
+        }, 3000);
+      }
+    });
+
+  </script>
+
+
+
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
@@ -387,6 +485,9 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+
 
 </body>
 
