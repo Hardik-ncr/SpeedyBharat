@@ -141,32 +141,32 @@
 
           <div class="col-lg-8">
             <form id="contactForm">
-              <div class="row gy-4">
-                <div class="col-md-6">
-                  <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                <div class="row gy-4">
+                    <div class="col-md-6">
+                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                        <small id="nameError" class="text-danger"></small>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="number" id="phone" class="form-control" placeholder="Your Phone" required>
+                        <small id="phoneError" class="text-danger"></small>
+                    </div>
+                    <div class="col-md-12">
+                        <input type="text" id="subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="col-md-12">
+                        <textarea id="message" class="form-control" rows="6" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="col-md-12 text-center">
+                        <button type="submit" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                    </div>
                 </div>
-                <div class="col-md-6">
-                  <input type="email" id="email" class="form-control" placeholder="Your Email" required>
-                </div>
-                <div class="col-md-12">
-                  <input type="number" id="phone" class="form-control" placeholder="Your Phone" required>
-                </div>
-                <div class="col-md-12">
-                  <input type="text" id="subject" class="form-control" placeholder="Subject" required>
-                </div>
-                <div class="col-md-12">
-                  <textarea id="message" class="form-control" rows="6" placeholder="Message" required></textarea>
-                </div>
-                <div class="col-md-12 text-center">
-                  <button type="submit" class="btn btn-primary btn-lg px-4 py-2 rounded-pill shadow">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                  </button>
-                </div>
-                
-              </div>
             </form>
-
-          </div><!-- End Contact Form -->
+        </div><!-- End Contact Form -->
 
         </div>
 
@@ -263,31 +263,63 @@
 
   <script>
     document.getElementById("contactForm").addEventListener("submit", function (event) {
-      event.preventDefault();
-  
-      var formData = new FormData();
-      formData.append("name", document.getElementById("name").value);
-      formData.append("email", document.getElementById("email").value);
-      formData.append("phone", document.getElementById("phone").value);
-      formData.append("subject", document.getElementById("subject").value);
-      formData.append("message", document.getElementById("message").value);
-  
-      fetch("https://script.google.com/macros/s/AKfycbxw38pfCqGqa4YmfFAMrIu0hOcvzgMMrdwTrDgBcwp_8js6ND-S5gt26Br4MIoAh4sKkw/exec", {
-        method: "POST",
-        body: formData
-      })
+        event.preventDefault();
+
+        // Get input values
+        let name = document.getElementById("name").value.trim();
+        let phone = document.getElementById("phone").value.trim();
+        let email = document.getElementById("email").value.trim();
+        let subject = document.getElementById("subject").value.trim();
+        let message = document.getElementById("message").value.trim();
+
+        // Validation flags
+        let isValid = true;
+
+        // Name validation: Only letters and spaces, at least 3 characters
+        let namePattern = /^[a-zA-Z\s]{3,}$/;
+        if (!namePattern.test(name)) {
+            document.getElementById("nameError").innerText = "Enter a valid name (only letters, min 3 characters).";
+            isValid = false;
+        } else {
+            document.getElementById("nameError").innerText = "";
+        }
+
+        // Phone validation: Must be exactly 10 digits
+        let phonePattern = /^[0-9]{10}$/;
+        if (!phonePattern.test(phone)) {
+            document.getElementById("phoneError").innerText = "Enter a valid 10-digit phone number.";
+            isValid = false;
+        } else {
+            document.getElementById("phoneError").innerText = "";
+        }
+
+        // If validation fails, stop form submission
+        if (!isValid) return;
+
+        // If all validations pass, proceed with form submission
+        var formData = new FormData();
+        formData.append("name", name);
+        formData.append("email", email);
+        formData.append("phone", phone);
+        formData.append("subject", subject);
+        formData.append("message", message);
+
+        fetch("https://script.google.com/macros/s/AKfycbxw38pfCqGqa4YmfFAMrIu0hOcvzgMMrdwTrDgBcwp_8js6ND-S5gt26Br4MIoAh4sKkw/exec", {
+            method: "POST",
+            body: formData
+        })
         .then(response => response.text())
         .then(data => {
-          if (data === "Success") {
-            alert("Your response has been submitted!");
-            document.getElementById("contactForm").reset();
-          } else {
-            alert("Error saving your message.");
-          }
+            if (data === "Success") {
+                alert("Your response has been submitted!");
+                document.getElementById("contactForm").reset();
+            } else {
+                alert("Error saving your message.");
+            }
         })
         .catch(error => console.error("Error:", error));
     });
-  </script>
+</script>
   
 </body>
 

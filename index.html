@@ -82,10 +82,11 @@
 
             <form action="#" class="form-search d-flex align-items-stretch mb-3" data-aos="fade-up" data-aos-delay="200"
               id="locationForm">
-              <input type="text" id="locationInput" class="form-control"
+              <input type="text" id="locationInput" class="form-control" autocomplete="off"
                 placeholder="Your Pin code Or City- Jaipur/ Delhi">
               <button type="submit" class="btn btn-primary">Search</button>
             </form>
+
 
             <!-- Service Available Modal -->
             <div class="modal fade" id="serviceAvailableModal" tabindex="-1" aria-labelledby="serviceAvailableLabel"
@@ -202,7 +203,8 @@
               By leveraging AI-driven route optimization and digital payment solutions, we reduce costs and enhance
               delivery speed.
               <br><br>
-              Aligning with India’s National Logistics Policy (NLP) 2022, SpeedyBharat Services is bridging the logistics gap,
+              Aligning with India’s National Logistics Policy (NLP) 2022, SpeedyBharat Services is bridging the
+              logistics gap,
               making deliveries smarter, faster, and more reliable.
             </p>
             <!-- <ul>
@@ -440,10 +442,12 @@
 
       let validLocations = [302001, 302002, 302003, 302004, 302005, 302006, 302007, 302008, 302009, 302010, 302011, 302012, 302013, 302015, 302016, 302017, 302018, 302019, 302020, 302021, 302022, 302023, 302024, 302025, 302026, 302027, 302028, 302029, 302030, 302031, 302032, 302033, 302034, 302035, 302036, 302039, 302040, 302043, 302048, 302049, 302931, 303001, 303012, 303017, 303031, 303033, 303101, 303801, 303902, 303905, 303906, 332012, 110001, 110002, 110003, 110004, 110005, 110008, 110010, 110011, 110012, 110013, 110014, 110016, 110017, 110018, 110019, 110020, 110021, 110022, 110023, 110024, 110025, 110028, 110029, 110030, 110031, 110037, 110038, 110044, 110046, 110047, 110048, 110049, 110055, 110057, 110060, 110062, 110064, 110065, 110066, 110067, 110068, 110069, 110070, 110074, 110076, 110080, 110090, 110091, 110092, 110096, 110097, 121003, 122010, 122022, 201313];
 
-      let inputLocation = document.getElementById('locationInput').value.trim();
-      let locationNumber = Number(inputLocation); // Convert to number
+      let validCities = ["jaipur", "new delhi", "delhi"];
 
-      if (validLocations.includes(locationNumber)) {
+      let inputLocation = document.getElementById('locationInput').value.trim().toLowerCase();
+      let locationNumber = Number(inputLocation); // Convert to number if possible
+
+      if (validLocations.includes(locationNumber) || validCities.includes(inputLocation)) {
         let serviceAvailableModal = new bootstrap.Modal(document.getElementById('serviceAvailableModal'));
         serviceAvailableModal.show();
 
@@ -471,8 +475,8 @@
         }, 3000);
       }
     });
-
   </script>
+
 
 
 
