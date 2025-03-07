@@ -1618,7 +1618,7 @@ section,
 --------------------------------------------------------------*/
 .team .member {
   background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
+  /* border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%); */
   text-align: center;
   margin-bottom: 20px;
 }
