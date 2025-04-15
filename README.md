@@ -16,7 +16,7 @@
 
 | Name             | Role                        | Expertise                                               |
 |------------------|-----------------------------|----------------------------------------------------------|
-| **Hardik Kathuria** | Co-Founder | Digital marketing, logistics ops, NGO partnerships |
+| **Hardik Kathuria** | Founder | Digital marketing, logistics ops, NGO partnerships |
 | **Abhishek Ojha**   | Co-Founder | Market research, business strategy, ops management |
 
 ---
